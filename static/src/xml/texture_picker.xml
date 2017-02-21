@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+  <!-- Template appelé via les scripts js -->
+   <t t-name="texture.TexturePicker">
+     <div class="texture-render">
+       <div id="texture-preview" class="texture-a"></div>
+       <div id="texture-text" class="text-center">Ref 10000 - texture-a</div>
+     </div>
+     <div id="texture-picker">
+       <ul class="texture-container">
+         <li class="">
+           <a href="#" class="texture-dropdown">
+             <span class="texture-label">Séléctionner une texture</span>
+             <span class="fa fa-chevron-down spin-caret pull-right"></span>
+           </a>
+           <ul class="texture-wrapper">
+              <t t-foreach="textures" t-as="texture">
+                <li>
+                  <a href="#" class="texture-row is-selected" t-attf-data-value="Ref {{ texture.id  }} - {{ texture.name }}" t-attf-data-class="{{ texture.name }}">
+                    <span class="texture-cube" t-attf-data-class="{{ texture.name }}"></span>
+                    <span class="texture-label" ><t t-esc="texture.label"/></span>
+                    <span t-if="is_active" class="status fa fa-check pull-right text-success"></span>
+                    <span t-else="" class="status fa fa-check pull-right text-success hide"></span>
+                  </a>
+                </li>
+              </t>
+           </ul>
+         </li>
+       </ul>
+     </div>
+   </t>
+
+   <t t-name="HomePageTemplate">
+    <div style="background-color: blue;">This is some simple HTML</div>
+   </t>
+</templates>

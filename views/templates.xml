@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+      <!-- Inclusions JS et CSS -->
+      <template id="texture_style" name="My texture style" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+          <!-- <link rel="stylesheet" href="/texture/static/src/less/texture.less" type="text/less"/> -->
+          <link rel="stylesheet" href="/texture/static/src/css/texture.css" type="text/css"/>
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+          <!-- <script type="text/javascript" src="/texture/static/src/js/texture.js"/> -->
+          <script type="text/javascript" src="/texture/static/src/js/main.js"/>
+        </xpath>
+      </template>
+      <template id="index">
+        <t t-call="website.layout">
+         <title>Textures</title>
+         <div class="container mt20">
+           <div class="col-xs-12 col-sm-6">
+             <h1 class="texture">Textures</h1>
+             <t t-foreach="textures" t-as="texture">
+               <ul class="list-group">
+                 <li class="list-group-item">
+                   <t t-esc="texture.id"/> -
+                   <t t-esc="texture.name"/> -
+                   <t t-esc="texture.label"/>
+                 </li>
+               </ul>
+             </t>
+           </div>
+           <div id="texture" class="col-xs-12 col-sm-6"></div>
+         </div>
+        </t>
+      </template>
+
+
+       <template id="HomePageTemplate">
+         <div style="background-color: red;">This is some simple HTML</div>
+       </template>
+    </data>
+</odoo>

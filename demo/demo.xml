@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+      <record id="texture-a" model="texture.textures">
+         <field name="id">1</field>
+         <field name="name">texture-a</field>
+         <field name="label">Texture A</field>
+      </record>
+      <record id="texture-b" model="texture.textures">
+         <field name="id">2</field>
+         <field name="name">texture-b</field>
+         <field name="label">Texture B</field>
+      </record>
+      <record id="texture-c" model="texture.textures">
+         <field name="id">3</field>
+         <field name="name">texture-c</field>
+         <field name="label">Texture C</field>
+      </record>
+      <record id="texture-d" model="texture.textures">
+         <field name="id">4</field>
+         <field name="name">texture-d</field>
+         <field name="label">Texture D</field> 
+      </record>
+  </data>
+</odoo>
